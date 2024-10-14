@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const error404 = document.querySelector(".not-found");
   
     search.addEventListener("click", () => {
-      const APIKey = "";
+      const APIKey = "68f260ef20b81b532131113011fc1bf9";
       const city = document.querySelector(".search-box input").value;
       // Kiểm tra nếu không có tên thành phố
       if (city.trim() === "") return;
