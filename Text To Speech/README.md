@@ -1,45 +1,58 @@
-<h2>Weather App</h2>
+<h2>Convert text to speech</h2>
         <h3>Demo project: https://text-to-speech-linezz.netlify.app</h3>
         <h3>Mô tả</h3>
-        <p>Input : <i>lưu ý nhập không dấu, có một số địa điểm sẽ hỗ trợ có dấu (Bạn có thể sửa lại hàm để thêm có dấu hoặc sử dụng api khác)</i></p>
-        <img src= "https://github.com/user-attachments/assets/a4951d85-f3eb-44c4-9562-d945e15e7e9e"/> 
+        <p>Input : <i>lưu ý nhập và chọn ngôn ngữ để Convert to speech</i></p>
+        <img src= "https://github.com/user-attachments/assets/a0666ede-d86c-4cc8-89e9-c86136c59edc"/> 
         <br>
         <br>    
         <p>Kết quả trả về </p>
-        <img src="https://github.com/user-attachments/assets/7dc33c4a-4585-4443-a3fb-20e0ea910a95"/>
+        <img src="https://github.com/user-attachments/assets/a86bc012-5966-4f31-9d75-43c82b266c9c"/>
         <br>
         <br>
-        <p>Sửa lại APIKey cá nhân :</p>
+        
 
-        const APIKey = "APIKey cá nhân";
+ <p>Lấy thông tin text, voice , button</p>
 
- <p>Lấy thông tin về thời tiết và cập nhật giao diện</p>
+         const textarea = document.querySelector("textarea"),
+         voiceList = document.querySelector("select"),
+         speechBtn = document.querySelector("button");
 
-        const image = document.querySelector(".weather-box img");
-        const temperature = document.querySelector(".weather-box .temperature");
-        const description = document.querySelector(".weather-box .description");
-        const humidity = document.querySelector(".weather-details .humidity span");
-        const wind = document.querySelector(".weather-details .wind span");
-<p>Cập nhật hình ảnh dựa trên tình trạng thời tiết</p>
+          let synth = speechSynthesis,
+            isSpeaking = true;
+        
+<p>Thực hiện button</p>
 
-            switch (json.weather[0].main) {
-            case "Clear":
-              image.src = "images/clear.png";
-              break;
-            case "Rain":
-              image.src = "images/rain.png";
-              break;
-            case "Snow":
-              image.src = "images/snow.png";
-              break;
-            case "Clouds":
-              image.src = "images/cloud.png";
-              break;
-            case "Haze":
-              image.src = "images/mist.png";
-              break;
-            default:
-              image.src = "";
-          }
+        speechBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+        
+            if (textarea.value !== "") {
+              //Check if not
+              if (!synth.speaking) {
+                textToSpeech(textarea.value);
+              }
+        
+              if (textarea.value.length > 80) {
+                setInterval(() => {
+                  if (!synth.speaking && !isSpeaking) {
+                    isSpeaking = true;
+                    speechBtn.innerText = "Convert To Speech";
+                  } else {
+                  }
+                }, 500);
+        
+                if (isSpeaking) {
+                  synth.resume();
+                  isSpeaking = true;
+                  speechBtn.innerText = "Pause Speech ...";
+                } else {
+                  synth.pause();
+                  isSpeaking = true;
+                  speechBtn.innerText = "Resume Speech";
+                }
+              } else {
+                speechBtn.innerText = "Convert To Speech";
+              }
+            }
+          });
 
 
