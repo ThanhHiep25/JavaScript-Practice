@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const index = alarmArray.indexOf(alarm);
     if (index > -1) {
       alarmArray.splice(index, 1);
-      document.querySelector(`[data-id="${alarm.id}]`).remove();
+      document.querySelector(`[data-id="${alarm.id}"]`).remove();
     }
   };
 
