@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="shortcut icon" href="images/circular-alarm-clock-tool.png" type="image/x-icon">
+        <link rel="stylesheet" href="alarm.css">
+        <script src="alarm.js"></script>
+        <title>___Alarm-App</title>
+    </head>
+    <body>
+        <div class="container-wapper">
+            <div class="current-time">
+                00 : 00 : 00
+            </div>
+            <div class="container">
+                <div class="inputs">
+                    <input type="number" name="hour-input" id="hour-input" min="0" max="23">
+                    <input type="number" name="minute-input" id="minute-input" min="00" max="59">
+                </div>
+                <div class="buttons">
+                    <button id="set">Add Alarm</button>
+                    <button id="set" class="clear">Clear All Alarm</button>
+                </div>
+
+                <div class="alarms-list"></div>
+            </div>
+        </div>
+    </body>
+</html>

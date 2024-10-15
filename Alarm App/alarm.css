@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --s12: 12px;
+  --s14: 14px;
+  --s16: 16px;
+  --s18: 18px;
+  --s20: 20px;
+  --s22: 22px;
+  --s24: 24px;
+  --s30: 30px;
+  --Pop: "Poppins", sans-serif;
+  --black-gray: #4f8c9bab;
+  --pink : #e335e6;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--Pop);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--black-gray);
+  padding: 50px 0;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  background-color: var(--pink);
+  width: 120px;
+  height: 120px;
+  left: 75%;
+  top: 20%;
+  filter: blur(90px);
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    background-color: var(--pink);
+    width: 120px;
+    height: 120px;
+    left: 10%;
+    top: 80%;
+    filter: blur(90px);
+}
+
+.container-wapper{
+    color: var(--white);
+    background: rgba(0, 0, 0, 0.44);
+    width: 50%;
+    max-width: 31.25em;
+    padding: 2em;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.current-time{
+    font-size: var(--s30);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.inputs input{
+    width: 50px;
+    font-size: var(--s20);
+    border: 1px solid #ccc;
+    background-color: transparent;
+    color: var(--white);
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 3px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+}
+
+button#set{
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: var(--white);
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 30px auto 0 auto;
+    cursor: pointer;
+    transition:  all 0.3s ease;
+}
+
+button#set:hover{
+    border-color: #30c090;
+    color: #30c090;
+}
+
+.alarm{
+    display: grid;
+    grid-template-columns: 9fr 1fr 2fr;
+    margin-top: 30px;
+    align-items: center;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 10px;
+}
+
+.alarm input[type="checkbox"]{
+    appearance: none;
+    height: 22px;
+    width: 60px;
+    background-color:  #e2e2e2;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.alarm input[type="checkbox"]::before{
+    position: absolute;
+    content: "";
+    background-color: #757575;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    top: 0px;
+    left: 0px;
+}
+
+.alarm input[type="checkbox"]:checked{
+    background-color: #30c090;
+}
+
+.alarm input[type="checkbox"]:checked::before{
+    background-color: #229e75;
+    left: 40px;
+}
+
+.deleteButton{
+    background-color: transparent;
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font-size: var(--s20);
+    transition: all 0.3s ease;
+}
+
+.deleteButton:hover{
+    color: #b86557;
+}
+
+@media screen and (max-width: 760px){
+    .container-wapper{
+        width: 80%;
+    }
+}
