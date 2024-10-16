@@ -1,11 +1,11 @@
 <h2>News Aggregator App</h2>
         <h3>Mô tả</h3>
         <p><i>Lưu ý chọn danh mục hoặc có thể nhập vào input để tìm kiếm tin tức liên quan </i></p>
-        <img src= "https://github.com/user-attachments/assets/a0666ede-d86c-4cc8-89e9-c86136c59edc"/> 
+        <img src= "https://github.com/user-attachments/assets/f33c13e0-c7ad-40d6-9501-30bba1301be1"/> 
         <br>
         <br>    
         <p>Kết quả trả về </p>
-        <img src="https://github.com/user-attachments/assets/a86bc012-5966-4f31-9d75-43c82b266c9c"/>
+        <img src="https://github.com/user-attachments/assets/13948e7a-b384-49b9-a9f5-69c7d9669402"/>
         <br>
         <br>
         
