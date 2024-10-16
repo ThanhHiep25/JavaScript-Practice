@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="images/8550544788153e0d60b80c9e87d9f180.jpg" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="agg.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="agg.js"></script>
+        <title>___Tổng hợp tin tức</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Tổng hợp tin tức</h1>
+    
+            <div class="selectionContainer">
+                <label for="category">Chọn danh mục :</label>
+                <select id="category">
+                    <option value="business">Kinh Doanh, Tài Chính</option>
+                    <option value="entertainment">Giải Trí</option>
+                    <option value="general">Tổng Quan</option>
+                    <option value="health">Sức Khỏe</option>
+                    <option value="science">Khoa Học</option>
+                    <option value="sports">Thể Thao</option>
+                    <option value="technology">Công Nghệ</option>
+                </select>
+                <button id="fetchCategory"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+    
+            <div class="searchContainer">
+                <input type="text" id="searchKeyword" placeholder="Search for news...">
+                <button onclick="fetchNews(true)"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+            <div id="newsContainer"></div>
+            
+        </div>
+    </body>
+</html>
