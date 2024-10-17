@@ -2,11 +2,11 @@
         <h3>Demo project: https://alarm-app-linezz.netlify.app</h3>
         <h3>Mô tả</h3>
         <p><i>Nhập giờ và phút để thực hiện đặt thông báo sau khi hoàn thành chờ đợi đến thời gian mà bạn đã đặt để tận hưởng thành quả</i></p>
-        <img src= "https://github.com/user-attachments/assets/a4951d85-f3eb-44c4-9562-d945e15e7e9e"/> 
+        <img src= "https://github.com/user-attachments/assets/55183477-d7e4-45b9-9328-5980acfea3c7"/> 
         <br>
         <br>    
         <p>Kết quả trả về </p>
-        <img src="https://github.com/user-attachments/assets/7dc33c4a-4585-4443-a3fb-20e0ea910a95"/>
+        <img src="https://github.com/user-attachments/assets/915ccdaa-7b67-4840-90aa-bbe28f5e6ea9"/>
         <br>
         <br>
         <p>Sửa lại APIKey cá nhân :</p>
